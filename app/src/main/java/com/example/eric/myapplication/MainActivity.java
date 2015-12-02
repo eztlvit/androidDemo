@@ -67,6 +67,8 @@ public class MainActivity extends Activity {
                 RelativeLayout rl = (RelativeLayout) parent.getItemAtPosition(position);
                 TextView tv = (TextView) rl.findViewById(R.id.text);
                 setTitle(tv.getText());
+
+                new AlertDialog.Builder(MainActivity.this).setTitle(tv.getText()).show();
             }
         });
     }
